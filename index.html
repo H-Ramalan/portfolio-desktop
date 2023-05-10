@@ -93,7 +93,7 @@
       </div>
     </section>
     <section class="project-cards">
-      <div class="project1">
+      <div class="project1 card">
         <div class="project-name">
           <p class="name">Data Dashboard</p>
           <p class="name">Healthcare</p>
@@ -111,7 +111,7 @@
         </div>
         <button class="see-project-appear">See Project</button>
       </div>
-      <div class="project2">
+      <div class="project2 card">
         <div class="project-name">
           <p class="name">Data Dashboard</p>
           <p class="name">Healthcare</p>
@@ -129,7 +129,7 @@
         </div>
         <button class="see-project-appear">See Project</button>
       </div>
-      <div class="project3">
+      <div class="project3 card">
         <div class="project-name">
           <p class="name">Website Portfolio</p>
         </div>
@@ -146,7 +146,7 @@
         </div>
         <button class="see-project-appear">See Project</button>
       </div>
-      <div class="project4">
+      <div class="project1 card">
         <div class="project-name">
           <p class="name">Professional Art</p>
           <p class="name">Printing Data More</p>
@@ -164,7 +164,7 @@
         </div>
         <button class="see-project-appear">See Project</button>
       </div>
-      <div class="project2">
+      <div class="project2 card">
         <div class="project-name">
           <p class="name">Data Dashboard</p>
           <p class="name">Healthcare</p>
@@ -182,7 +182,7 @@
         </div>
         <button class="see-project-appear">See Project</button>
       </div>
-      <div class="project3">
+      <div class="project3 card">
         <div class="project-name">
           <p class="name">Website Portfolio</p>
         </div>
@@ -255,24 +255,35 @@
         </p>
       </div>
       <div class="contact-form">
-        <form action="" class="form">
+        <form
+          action="https://formspree.io/f/mbjewdna"
+          method="post"
+          class="form"
+        >
           <input
             type="text"
             class="fullname input"
             placeholder="Full Name"
             maxlength="30"
+            required
+            name="fullname"
           />
           <input
-            type="text"
+            type="email"
             class="email input"
             placeholder="Email Address"
             maxlength="30"
+            required
+            name="email"
           />
           <textarea
             maxlength="500"
             class="input textarea"
             cols="15"
             rows="4"
+            required
+            type="text"
+            name="text"
             placeholder="Write me something..."
           ></textarea>
           <button class="get-in-touch">Get in touch</button>

@@ -4,16 +4,6 @@
   box-sizing: border-box;
 }
 
-@media only screen and (min-width: 768px), {
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #dfe1e6;
-    scroll-behavior: smooth;
-  }
-}
-
 .header {
   height: 4rem;
   background-color: #3e3c3c;
@@ -43,6 +33,10 @@
   margin: 0 8rem;
   display: flex;
   justify-content: space-between;
+}
+@media only screen and (max-width: 768px), {
+  .nav {
+  }
 }
 
 .nav-link-container {
@@ -225,13 +219,19 @@ h2 {
 }
 
 .project1 {
-  background-image: url(./images/pj1.png);
+  background-image: url(./images/pj-1.svg);
   background-size: cover;
   height: 435px;
   width: calc(33.33% - 20px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.project1:hover {
+  background-image: url(./images/pj1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .see-project-appear {
@@ -243,6 +243,11 @@ h2 {
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
+  display: none;
+}
+
+.card:hover .see-project-appear {
+  display: block;
 }
 
 .see-project-appear:disabled {
@@ -300,13 +305,19 @@ h2 {
 }
 
 .project2 {
-  background-image: url(./images/pj2.png);
+  background-image: url(./images/project2.svg);
   background-size: cover;
   height: 435px;
   width: calc(33.33% - 20px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.project2:hover {
+  background-image: url(./images/pj2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .project2:hover > .project-name {
@@ -322,13 +333,19 @@ h2 {
 }
 
 .project3 {
-  background-image: url(./images/pj3.png);
-  background-size: cover;
+  background-image: url(./images/project3.svg);
+  background-size: contain;
   height: 435px;
   width: calc(33.33% - 20px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.project3:hover {
+  background-image: url(./images/pj3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .project3:hover > .project-name {
@@ -548,6 +565,7 @@ li.skills::before {
   line-height: 52px;
   width: 30%;
   color: #262626;
+  width: 455px;
 }
 
 .input {
