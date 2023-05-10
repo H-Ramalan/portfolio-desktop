@@ -1,4 +1,4 @@
-  <h3><b>Portfolio Mobile First Project</b></h3>
+  <h3><b>Portfolio Desktop</b></h3>
 
 # 📗 Table of Contents
 
@@ -17,9 +17,9 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 [Portfolio Mobile First] <a name="about-project"></a>
+# 📖 [Portfolio Desktop] <a name="about-project"></a>
 
-**[Portfolio Mobile First]** is a mobile-first version of my portfolio project. It will showcase my skills in HTML and CSS and also shows the usage of new concepts of CSS which includes the use of flex-box and css-gridbox.
+**[Portfolio Desktop]** is a desktop version of my portfolio project. It will showcase my skills in HTML and CSS and also shows the usage of new concepts of CSS which includes the use of flex-box and css-gridbox.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -32,7 +32,7 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-Creating my "Portfolio Mobile-First" project
+Creating my "Portfolio Desktop" project
 
 To run this application localy, follow these steps.
 
@@ -53,13 +53,13 @@ In order to run this project you need:
 1.  Clone the Repo with:
 
 ```
-git clone https://github.com/H-Ramalan/Portfolio-mobile-first.git
+git clone https://github.com/H-Ramalan/Portfolio-Desktop.git
 ```
 
 2. switch to the cloned directory
 
 ```
-cd Hello-World
+cd Portfolio-Desktop
 ```
 
 ### Installation

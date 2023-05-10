@@ -4,49 +4,66 @@
   box-sizing: border-box;
 }
 
+@media only screen and (min-width: 768px), {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #dfe1e6;
+    scroll-behavior: smooth;
+  }
+}
+
 .header {
   height: 4rem;
   background-color: #3e3c3c;
   display: flex;
   align-items: center;
 }
+
 .nav-logo {
   color: #fff;
   display: flex;
   align-items: center;
   text-decoration: none;
 }
+
 .logo-text {
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
   color: #fff;
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
 }
+
 .nav {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   width: 100%;
   margin: 0 8rem;
   display: flex;
   justify-content: space-between;
 }
+
 .nav-link-container {
   display: flex;
   align-items: center;
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
 }
+
 .nav-link {
   color: #fff;
   text-decoration: none;
   margin-right: 30px;
 }
+
 .nav-link:last-of-type {
-  margin-right: 0px;
+  margin-right: 0;
 }
+
 .aside-icons {
   display: flex;
   flex-direction: column;
@@ -64,17 +81,18 @@
   display: flex;
   align-items: center;
 }
+
 h1 {
   color: #f55800;
-  font-family: Crete Round;
+  font-family: "Crete Round", sans-serif;
   font-size: 72px;
   font-weight: 400;
   line-height: 82px;
 }
 
 .dev {
-  color: #ffffff;
-  font-family: Inter;
+  color: #fff;
+  font-family: "Inter", sans-serif;
   font-size: 32px;
   font-weight: 500;
   line-height: 44px;
@@ -82,21 +100,32 @@ h1 {
 }
 
 .main-note {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 32px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #f4f5f7;
 }
 
 .main-box {
-  width: 50%;
   display: flex;
   flex-direction: column;
   width: 36%;
   margin-left: 3rem;
+}
+
+.footer-icons > li {
+  margin-right: 20px;
+}
+
+.icons > li {
+  margin-bottom: 20px;
+}
+
+.footer-icons > li:last-of-type {
+  margin-right: 20px;
 }
 
 .icons {
@@ -106,12 +135,8 @@ h1 {
   height: 20%;
 }
 
-.icons > li {
-  margin-bottom: 20px;
-}
-
 .icons > li:last-of-type {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .works {
@@ -130,7 +155,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Crete Round" sans-serif;
+  font-family: "Crete Round", sans-serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 52px;
@@ -167,7 +192,7 @@ h2 {
   color: #fff;
   padding: 10px 20px;
   border: none;
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
@@ -181,6 +206,24 @@ h2 {
   justify-content: center;
 }
 
+.project-note {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+  padding-left: 20px;
+}
+
+.project-name {
+  font-family: "Crete Round", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 44px;
+  color: #fff;
+  padding-left: 20px;
+}
+
 .project1 {
   background-image: url(./images/pj1.png);
   background-size: cover;
@@ -191,33 +234,29 @@ h2 {
   justify-content: flex-end;
 }
 
-.see-project {
+.see-project-appear {
   background-color: #ff6b00;
   color: #fff;
   padding: 15px;
   border: none;
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
 }
 
-.see-project:enabled {
-  color: #fff;
-  background-color: #f55800;
-}
-
-.see-project:disabled {
+.see-project-appear:disabled {
   color: #5b5957;
   background-color: #f4f1f0;
 }
-.see-project:hover:enabled {
+
+.see-project-appear:hover:enabled {
   color: #f55800;
   background-color: #fff5e1;
   border: 2px solid #f55800;
 }
 
-.see-project:active:enabled {
+.see-project-appear:active:enabled {
   background-color: #f55800;
   color: #fff;
 }
@@ -231,6 +270,7 @@ h2 {
   color: #5b5957;
   background-color: #f4f1f0;
 }
+
 .see-project-btn:hover:enabled {
   color: #f55800;
   background-color: #fff5e1;
@@ -242,6 +282,23 @@ h2 {
   color: #fff;
 }
 
+.project-stack {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.project1:hover > .project-name {
+  display: none;
+}
+
+.project1:hover > .project-note {
+  display: none;
+}
+
+.project1:hover > .project-stack {
+  visibility: hidden;
+}
+
 .project2 {
   background-image: url(./images/pj2.png);
   background-size: cover;
@@ -250,8 +307,6 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
-  padding-left: 20px;
 }
 
 .project2:hover > .project-name {
@@ -261,6 +316,7 @@ h2 {
 .project2:hover > .project-note {
   display: none;
 }
+
 .project2:hover > .project-stack {
   visibility: hidden;
 }
@@ -273,8 +329,18 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
-  padding-left: 20px;
+}
+
+.project3:hover > .project-name {
+  display: none;
+}
+
+.project3:hover > .project-note {
+  display: none;
+}
+
+.project3:hover > .project-stack {
+  visibility: hidden;
 }
 
 .project4 {
@@ -285,28 +351,18 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
-  padding-left: 20px;
 }
 
-.project-stack {
-  margin: 10px 0;
+.project4:hover > .project-name {
+  display: none;
 }
 
-.project-note {
-  font-family: "Inter" sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #fff;
+.project4:hover > .project-note {
+  display: none;
 }
 
-.project-name {
-  font-family: "Crete Round" sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 44px;
-  color: #fff;
+.project4:hover > .project-stack {
+  visibility: hidden;
 }
 
 .project-stack-used {
@@ -326,9 +382,11 @@ h2 {
   margin: 10px;
   background-color: #d1dbde63;
 }
+
 .tech-used:first-of-type {
   margin-left: 0;
 }
+
 .about-me {
   background-color: #1c1a19;
   margin-top: 6rem;
@@ -352,7 +410,7 @@ h2 {
 }
 
 .about {
-  font-family: "Crete Round" sans-serif;
+  font-family: "Crete Round", sans-serif;
   font-size: 72px;
   font-weight: 400;
   line-height: 82px;
@@ -361,7 +419,7 @@ h2 {
 
 .about-me-note {
   color: #f4f5f7;
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 32px;
@@ -369,8 +427,7 @@ h2 {
 }
 
 .get-my-resume {
-  padding: 10px;
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
@@ -381,6 +438,7 @@ h2 {
   padding: 10px 0;
   margin: 20px 0;
 }
+
 .get-my-resume:enabled {
   color: #fff;
   background-color: #f55800;
@@ -412,7 +470,7 @@ h2 {
   color: #f4f5f7;
   margin-left: 10%;
   width: 80%;
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 44px;
@@ -426,11 +484,11 @@ h2 {
 
 .list {
   list-style: none;
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 22px;
   font-weight: 400;
   line-height: 43px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
 }
 
@@ -484,7 +542,7 @@ li.skills::before {
 }
 
 .contact-note {
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 52px;
@@ -497,7 +555,7 @@ li.skills::before {
   border-bottom: 1px solid #dbd8d7;
   padding: 10px 0 10px 5px;
   margin-bottom: 15px;
-  font-family: "Roboto" sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
@@ -508,7 +566,7 @@ li.skills::before {
   background-color: #fbf8f7;
   color: #3c3a39;
   border: none;
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 15px;
   font-style: italic;
   font-weight: 400;
@@ -520,7 +578,7 @@ li.skills::before {
   width: 25%;
   padding: 15px;
   border: none;
-  font-family: "Roboto" sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
@@ -559,12 +617,4 @@ li.skills::before {
   list-style: none;
   height: 15%;
   padding: 25px 2%;
-}
-
-.footer-icons > li {
-  margin-right: 20px;
-}
-
-.footer-icons > li:last-of-type {
-  margin-right: 20px;
 }
