@@ -34,10 +34,6 @@
   display: flex;
   justify-content: space-between;
 }
-@media only screen and (max-width: 768px), {
-  .nav {
-  }
-}
 
 .nav-link-container {
   display: flex;
@@ -246,13 +242,13 @@ h2 {
   display: none;
 }
 
-.card:hover .see-project-appear {
-  display: block;
-}
-
 .see-project-appear:disabled {
   color: #5b5957;
   background-color: #f4f1f0;
+}
+
+.card:hover .see-project-appear {
+  display: block;
 }
 
 .see-project-appear:hover:enabled {
@@ -563,7 +559,6 @@ li.skills::before {
   font-size: 40px;
   font-weight: 700;
   line-height: 52px;
-  width: 30%;
   color: #262626;
   width: 455px;
 }
