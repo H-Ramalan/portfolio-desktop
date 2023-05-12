@@ -762,16 +762,16 @@ li.languages {
 }
 
 li.languages::before {
-  color: orange;
-  content: "\25AA";
+  color: #f55800;
+  content: "\25A0";
   display: inline-block;
   transform: rotate(45deg);
   margin-right: 8px;
 }
 
 li.frameworks::before {
-  color: orange;
-  content: "\25AA";
+  color: #f55800;
+  content: "\25A0";
   margin-right: 8px;
 }
 
@@ -784,9 +784,9 @@ li.skills {
 }
 
 li.skills::before {
-  color: orange;
+  color: #f55800;
   margin-right: 8px;
-  content: "\25AA";
+  content: "\2B24";
 }
 
 .contact-me {
