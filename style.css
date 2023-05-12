@@ -9,6 +9,10 @@
   background-color: #3e3c3c;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .nav-logo {
@@ -44,6 +48,19 @@
   line-height: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .nav-link-container {
+    display: none;
+  }
+  .nav {
+    margin: 0 2rem;
+  }
+}
 .nav-link {
   color: #fff;
   text-decoration: none;
@@ -70,6 +87,8 @@
   height: calc(100vh - 4rem);
   display: flex;
   align-items: center;
+
+  margin-top: 4rem;
 }
 
 h1 {
@@ -106,6 +125,40 @@ h1 {
   margin-left: 3rem;
 }
 
+@media (max-width: 768px) {
+  .main {
+    background-image: url(./images/Illustration.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
+  .dev {
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    line-height: 32px;
+    padding: 10px 0;
+  }
+
+  h1 {
+    font-family: "Crete Round", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+  }
+
+  .aside-icons {
+    display: none;
+  }
+  .main-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 2rem;
+  }
+  .works {
+    margin: 3.5rem 2rem;
+  }
+}
 .footer-icons > li {
   margin-right: 20px;
 }
@@ -139,9 +192,40 @@ h1 {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .recent-works {
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+  }
+  .works {
+    margin: 3.5rem 2rem;
+  }
+  .project-image {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
 .recent-work-card {
   display: flex;
   align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .recent-work-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 3.5rem 0rem;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 52px;
+    margin: 3.5rem 2rem;
+  }
 }
 
 h2 {
@@ -167,7 +251,7 @@ h2 {
 .recent-tech {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   margin: 20px 0;
 }
 
@@ -175,6 +259,7 @@ h2 {
   border: 1px solid #8993a4;
   padding: 8px 10px;
   margin-right: 10px;
+  margin-bottom: 1rem;
 }
 
 .see-project-btn {
@@ -194,6 +279,23 @@ h2 {
   margin: 5rem 8rem;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .multi-post-stories {
+    margin-left: 0;
+  }
+  .project-cards {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 2rem;
+    gap: 20px;
+  }
+
+  .card {
+    height: 386px;
+    width: 100% !important;
+  }
 }
 
 .project-note {
@@ -226,7 +328,7 @@ h2 {
 
 .project1:hover {
   background-image: url(./images/pj1.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -302,6 +404,7 @@ h2 {
 
 .project2 {
   background-image: url(./images/project2.svg);
+  background-repeat: no-repeat;
   background-size: cover;
   height: 435px;
   width: calc(33.33% - 20px);
@@ -313,7 +416,7 @@ h2 {
 .project2:hover {
   background-image: url(./images/pj2.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .project2:hover > .project-name {
@@ -330,7 +433,8 @@ h2 {
 
 .project3 {
   background-image: url(./images/project3.svg);
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 435px;
   width: calc(33.33% - 20px);
   display: flex;
@@ -341,7 +445,7 @@ h2 {
 .project3:hover {
   background-image: url(./images/pj3.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .project3:hover > .project-name {
@@ -358,6 +462,7 @@ h2 {
 
 .project4 {
   background-image: url(./images/pj1.png);
+  background-repeat: no-repeat;
   background-size: cover;
   height: 435px;
   width: calc(33.33% - 20px);
@@ -444,7 +549,7 @@ h2 {
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
-  width: 35%;
+  width: 60%;
   background-color: #ff6b00;
   border: none;
   color: #f4f5f7;
@@ -473,6 +578,47 @@ h2 {
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  .about-me {
+    width: 100%;
+  }
+  .about--me {
+    background-image: url(./images/Frame.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 50px;
+  }
+
+  .about-me-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 30%;
+    margin: 3.5rem 0rem;
+  }
+
+  .about {
+    font-size: 50px;
+  }
+
+  .about-me-note {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .get-my-resume {
+    padding: 10px 10px;
+    width: 50%;
+  }
+}
+
 .stack {
   margin-bottom: 5rem;
 }
@@ -495,6 +641,19 @@ h2 {
   margin-right: 8rem;
 }
 
+@media (max-width: 768px) {
+  .stacks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hr-stack {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
 .list {
   list-style: none;
   font-family: "Inter", sans-serif;
@@ -503,6 +662,15 @@ h2 {
   line-height: 43px;
   letter-spacing: 0;
   text-align: left;
+}
+
+@media (max-width: 768px) {
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
 }
 
 li.languages {
@@ -588,7 +756,7 @@ li.skills::before {
 }
 
 .get-in-touch {
-  width: 25%;
+  width: 50%;
   padding: 15px;
   border: none;
   font-family: "Roboto", sans-serif;
@@ -617,6 +785,34 @@ li.skills::before {
 .get-in-touch:active:enabled {
   background-color: #f55800;
   color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 3rem 2rem;
+  }
+
+  .contact-note {
+    width: 100%;
+    margin: 3rem 2rem;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44px;
+    text-align: center;
+  }
+  .contact-form {
+    width: 100%;
+  }
+
+  .get-in-touch {
+    width: 50%;
+    margin-left: 5rem;
+  }
 }
 
 .footer {
