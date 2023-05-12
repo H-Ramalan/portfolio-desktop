@@ -38,7 +38,11 @@
   display: flex;
   justify-content: space-between;
 }
-
+.ham {
+  display: flex;
+  justify-content: space-between;
+  display: none;
+}
 .nav-link-container {
   display: flex;
   align-items: center;
@@ -59,6 +63,17 @@
   }
   .nav {
     margin: 0 2rem;
+  }
+
+  .ham {
+    display: block;
+  }
+
+  .logo-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
   }
 }
 .nav-link {
@@ -132,6 +147,7 @@ h1 {
     background-repeat: no-repeat;
   }
   .dev {
+    font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 24px;
     color: #fff;
@@ -144,6 +160,14 @@ h1 {
     font-size: 56px;
     font-weight: 400;
     line-height: 64px;
+    font-family: Crete Round;
+  }
+
+  .main-note {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
   }
 
   .aside-icons {
@@ -154,11 +178,13 @@ h1 {
     flex-direction: column;
     width: 100%;
     margin-left: 2rem;
+    margin-bottom: 6rem;
   }
   .works {
     margin: 3.5rem 2rem;
   }
 }
+
 .footer-icons > li {
   margin-right: 20px;
 }
@@ -197,14 +223,12 @@ h1 {
     display: flex;
     flex-direction: column;
   }
-  h1 {
-  }
+
   .works {
     margin: 3.5rem 2rem;
   }
   .project-image {
     width: 100%;
-    margin-bottom: 2rem;
   }
 }
 
@@ -213,27 +237,11 @@ h1 {
   align-items: flex-start;
 }
 
-@media (max-width: 768px) {
-  .recent-work-card {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 3.5rem 0rem;
-  }
-  h2 {
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 52px;
-    margin: 3.5rem 2rem;
-  }
-}
-
 h2 {
   font-family: "Crete Round", sans-serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 52px;
-  margin-bottom: 20px;
 }
 
 .hr-recent {
@@ -248,11 +256,20 @@ h2 {
   align-items: flex-start;
 }
 
+.recent-note {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 5px;
+}
+
 .recent-tech {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   margin: 20px 0;
+  margin-top: 5px;
 }
 
 .recent-tech-used {
@@ -271,6 +288,33 @@ h2 {
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
+}
+
+@media (max-width: 768px) {
+  .recent-work-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  h2 {
+    margin: 1.5rem 0;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 44px;
+  }
+
+  .hr-recent {
+    width: 100%;
+  }
+
+  .recent-note {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
 }
 
 .project-cards {
@@ -581,6 +625,7 @@ h2 {
 @media (max-width: 768px) {
   .about-me {
     width: 100%;
+    margin-top: 5rem;
   }
   .about--me {
     background-image: url(./images/Frame.png);
@@ -593,12 +638,12 @@ h2 {
     align-items: flex-start;
     justify-content: center;
     height: 100vh;
-    margin-top: 50px;
   }
 
   .about-me-box {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     width: 100%;
     height: 30%;
     margin: 3.5rem 0rem;
@@ -670,6 +715,10 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-items: center;
+  }
+
+  li.skills {
+    text-align: center;
   }
 }
 
@@ -805,6 +854,13 @@ li.skills::before {
     line-height: 44px;
     text-align: center;
   }
+
+  .note {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44px;
+  }
+
   .contact-form {
     width: 100%;
   }
