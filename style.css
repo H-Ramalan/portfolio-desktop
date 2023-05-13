@@ -53,16 +53,6 @@
     visibility: hidden;
   }
 
-  .nav-link-container {
-    display: flex;
-    display: block;
-    align-items: center;
-    font-family: "Inter", sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 20px;
-  }
-
   h1 {
     font-family: "Crete Round", sans-serif;
     font-size: 56px;
@@ -86,13 +76,6 @@
     margin-bottom: 10rem;
   }
 
-  .nav-logo {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
-
   .nav-link-container {
     display: flex;
     align-items: center;
@@ -100,7 +83,6 @@
     font-size: 15px;
     font-weight: 600;
     line-height: 20px;
-    align-items: center;
   }
 }
 
