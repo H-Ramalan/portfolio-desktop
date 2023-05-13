@@ -85,6 +85,23 @@
     height: 20%;
     margin-bottom: 10rem;
   }
+
+  .nav-logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .nav-link-container {
+    display: flex;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    align-items: center;
+  }
 }
 
 .header {
@@ -102,13 +119,6 @@ body {
   margin: 0;
 }
 
-.nav-logo {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
 .logo-text {
   font-weight: 700;
   font-size: 20px;
@@ -124,6 +134,7 @@ body {
   margin: 0 8rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .ham {
