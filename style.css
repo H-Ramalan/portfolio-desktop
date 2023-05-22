@@ -53,6 +53,10 @@
     visibility: hidden;
   }
 
+  .modal {
+    display: none;
+  }
+
   h1 {
     font-family: "Crete Round", sans-serif;
     font-size: 56px;
@@ -757,6 +761,21 @@ li.skills::before {
 
   .ham {
     visibility: visible;
+  }
+
+  .modal {
+    height: 755px;
+    width: 375px;
+    background-color: #3c3a39;
+  }
+
+  .hr-modal {
+    width: 327px;
+    color: #6f6c6b;
+  }
+
+  .modal-items {
+    color: #dbd8d7;
   }
 
   .nav {
