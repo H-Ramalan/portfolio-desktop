@@ -3,9 +3,11 @@
 const modalOpen = document.querySelector(".ham");
 const modalClose = document.querySelector(".nav-close");
 const modal = document.querySelector(".modal-view");
+const modalList = document.querySelectorAll(".list-modal");
 
-const openModal = () => {
+const openModal = (e) => {
   modal.style.display = "flex";
+  e.preventDefault();
 };
 
 const closeModal = () => {
@@ -14,4 +16,7 @@ const closeModal = () => {
 
 modalOpen.addEventListener("click", openModal);
 modalClose.addEventListener("click", closeModal);
-// e.preventDefault();
+
+// for (let i = 0; i < modalList.length; i += 1) {
+//   modalList[i].addEventListener("click", closeModal);
+// }

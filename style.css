@@ -790,7 +790,7 @@ li.skills::before {
     border-bottom: 1px solid #6f6c6b;
   }
 
-  .list-modal {
+  #list-modal {
     color: #dfe1e6;
     text-decoration: none;
     font-family: "Inter", sans-serif;
