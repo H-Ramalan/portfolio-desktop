@@ -101,6 +101,16 @@ body {
   margin: 0;
 }
 
+.modal-view {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 9999;
+  padding: 5%;
+}
+
 .logo-text {
   font-weight: 700;
   font-size: 20px;
@@ -749,6 +759,54 @@ li.skills::before {
     top: 0;
     left: 0;
     right: 0;
+  }
+
+  .modal-view {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    overflow: auto;
+    background-color: #3c3a39;
+  }
+
+  .modal-content {
+    padding: 5%;
+    margin: 0 auto;
+    background-color: #3c3a39;
+    width: 100%;
+  }
+
+  .modal-list {
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .modal-list li {
+    padding: 2%;
+    border-bottom: 1px solid #6f6c6b;
+  }
+
+  /* #list-modal {
+    color: #dfe1e6;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    line-height: 44px;
+    font-size: 32px;
+  } */
+
+  .nav-close {
+    margin: 5%;
+    float: right;
+    margin-bottom: 5%;
+  }
+
+  .modal-elements {
+    margin-top: 3rem;
   }
 
   .nav-link-container {
