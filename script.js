@@ -17,6 +17,6 @@ const closeModal = () => {
 modalOpen.addEventListener("click", openModal);
 modalClose.addEventListener("click", closeModal);
 
-// for (let i = 0; i < modalList.length; i += 1) {
-//   modalList[i].addEventListener("click", closeModal);
-// }
+for (let i = 0; i < modalList.length; i += 1) {
+  modalList[i].addEventListener("click", closeModal);
+}
