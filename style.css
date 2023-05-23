@@ -956,6 +956,18 @@ li.skills::before {
     width: 100% !important;
   }
 
+  .see-project-appear {
+    background-color: #ff6b00;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    display: block;
+  }
+
   .about-me {
     width: 100%;
     margin-top: 5rem;
