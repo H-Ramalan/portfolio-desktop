@@ -511,6 +511,105 @@ h2 {
   margin-left: 0;
 }
 
+.project-popup {
+  height: 631px;
+  width: 1156px;
+}
+
+.popup-content {
+  margin: 24px;
+}
+
+.popup-name {
+  font-family: "Crete Round", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 44px;
+  text-align: left;
+  color: #172b4d;
+}
+
+.popup-list {
+  border: 1px solid #8993a4;
+  padding: 8px 10px;
+}
+
+.close-popup {
+  height: 12px;
+  width: 12px;
+  float: right;
+}
+
+.popup-stack {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.pop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pop-notes {
+  height: 336px;
+  width: 424px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.popup-note {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+}
+
+.popup-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.mobile {
+  display: none;
+}
+
+.see {
+  background-color: #ff6b00;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.img-icon {
+  margin-left: 10px;
+}
+
+.see-link {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .about-me {
   background-color: #1c1a19;
   margin-top: 6rem;
@@ -848,6 +947,53 @@ li.skills::before {
     font-weight: 700;
     line-height: 24px;
     color: #fff;
+  }
+
+  .project-popup {
+    width: 95%;
+  }
+
+  .close-popup {
+    height: 12px;
+    width: 12px;
+    float: right;
+    margin-top: 15px;
+  }
+
+  .popup-stack {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pop {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile {
+    display: block;
+
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .popup-btns {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .popup-note {
+    display: none;
+  }
+
+  .pop-notes {
+    height: 220px;
+    width: 311px;
+    margin: 1.5rem 0;
   }
 
   .main {
