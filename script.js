@@ -23,6 +23,23 @@ for (let i = 0; i < modalList.length; i += 1) {
 
 // Modal Popup
 
+const projectPopup = document.querySelector(".project-popup");
+const btnOpenPopup = document.querySelectorAll(".see-project-appear");
+const btnClosePopup = document.querySelector(".close-popup");
+
+const openPopup = () => {
+  projectPopup.style.display = "block";
+};
+
+const closePopup = () => {
+  projectPopup.style.display = "none";
+};
+
+for (i = 0; i < btnOpenPopup.length; i += 1) {
+  btnOpenPopup[i].addEventListener("click", openPopup);
+}
+btnClosePopup.addEventListener("click", closePopup);
+
 const projects = [
   {
     id: 0,

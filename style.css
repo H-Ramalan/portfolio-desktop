@@ -514,6 +514,7 @@ h2 {
 .project-popup {
   height: 631px;
   width: 1156px;
+  display: none;
 }
 
 .popup-content {
@@ -950,6 +951,7 @@ li.skills::before {
   }
 
   .project-popup {
+    display: none;
     width: 95%;
   }
 
