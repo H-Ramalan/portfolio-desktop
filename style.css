@@ -686,10 +686,10 @@ li.skills::before {
   color: #979493;
 }
 
-.error {
+/* .error {
   color: red;
   display: none;
-}
+} */
 
 .textarea {
   background-color: #fbf8f7;
