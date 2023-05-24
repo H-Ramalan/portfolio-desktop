@@ -20,3 +20,13 @@ modalClose.addEventListener('click', closeModal);
 for (let i = 0; i < modalList.length; i += 1) {
   modalList[i].addEventListener('click', closeModal);
 }
+
+const form = document.querySelector('.contact-form');
+const email = document.querySelector('.email');
+const invalidMsg = document.querySelector('.error');
+form.addEventListener('submit', (e) => {
+  if (email.value.toLowerCase() !== email.value) {
+    invalidMsg.style.display = 'block';
+    e.preventDefault();
+  }
+});
