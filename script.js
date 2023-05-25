@@ -21,14 +21,6 @@ for (let i = 0; i < modalList.length; i += 1) {
   modalList[i].addEventListener("click", closeModal);
 }
 
-const works = {
-  name: "Multi-Post Stories",
-  description:
-    "A daily selection of privately personalized reads; no accounts or sign-ups required. This has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
-  technologies: ["CSS", "HTML", "Bootstrap", "Ruby"],
-  image: "./images/Img Placeholder.svg",
-};
-
 const projects = [
   {
     id: 0,
@@ -108,13 +100,14 @@ projects.forEach((project, i) => {
 
 // Modal Popup
 
-const projectPopup = document.querySelector(".project-popup");
-const btnOpenPopup = document.querySelectorAll(".see-project-appear");
-const btnClosePopup = document.querySelector(".close-popup");
+// const projectPopup = document.querySelector(".project-popup");
+// const btnOpenPopup = document.querySelectorAll(".see-project-appear");
+// const btnClosePopup = document.querySelector(".close-popup");
+// const recentWorksPopup = document.querySelector(".see-project-btn");
 
 const openPopup = () => {
   projectPopup.style.display = "block";
-  project.style.overflow = "auto";
+  projectPopup.style.overflow = "auto";
 };
 
 const closePopup = () => {
@@ -125,3 +118,4 @@ for (i = 0; i < btnOpenPopup.length; i += 1) {
   btnOpenPopup[i].addEventListener("click", openPopup);
 }
 btnClosePopup.addEventListener("click", closePopup);
+recentWorksPopup.addEventListener("click", openPopup);
