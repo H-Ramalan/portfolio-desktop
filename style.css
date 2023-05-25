@@ -274,7 +274,7 @@ h2 {
   list-style: none;
   display: flex;
   margin: 10px 0;
-  padding-left: 0px;
+  padding-left: 0;
 }
 
 .recent-tech-used {
@@ -693,7 +693,7 @@ h2 {
   line-height: 24px;
   letter-spacing: 0.03em;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -1079,7 +1079,7 @@ li.skills::before {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
   }
 
@@ -1215,6 +1215,7 @@ li.skills::before {
     line-height: 24px;
     display: block;
   }
+
   .project-stack-used {
     display: flex;
     list-style: none;
