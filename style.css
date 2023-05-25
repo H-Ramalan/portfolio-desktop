@@ -659,6 +659,16 @@ h2 {
   display: none;
 }
 
+.backdrop-popup {
+  display: none;
+  z-index: 999;
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  opacity: 0.6;
+}
+
 .see {
   background-color: #ff6b00;
   color: #fff;
@@ -1026,13 +1036,18 @@ li.skills::before {
     color: #fff;
   }
 
+  .backdrop-popup {
+    z-index: 999;
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    opacity: 0.1;
+  }
+
   .project-popup {
     display: none;
     position: fixed;
-    margin: 5%;
-    /* transform: translate(-50%, -50%); */
-    top: 0;
-    left: 0;
     height: 90vh;
     width: 90vw;
     z-index: 9999;

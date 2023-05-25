@@ -101,6 +101,8 @@ projects.forEach((project, i) => {
 // Modal Popup
 
 const projectPopup = document.querySelector(".project-popup");
+
+const backdropPopup = document.querySelector(".backdrop-popup");
 const btnOpenPopup = document.querySelectorAll(".see-project-appear");
 const btnClosePopup = document.querySelector(".close-popup");
 const recentWorksPopup = document.querySelector(".see-project-btn");
@@ -108,10 +110,13 @@ const recentWorksPopup = document.querySelector(".see-project-btn");
 const openPopup = () => {
   projectPopup.style.display = "block";
   projectPopup.style.overflow = "auto";
+  backdropPopup.style.display = "block";
+  backdropPopup.style.overflow = "auto";
 };
 
 const closePopup = () => {
   projectPopup.style.display = "none";
+  backdropPopup.style.display = "none";
 };
 
 for (i = 0; i < btnOpenPopup.length; i += 1) {
