@@ -134,4 +134,3 @@ for (let i = 0; i < btnOpenPopup.length; i += 1) {
 
 btnClosePopup.addEventListener('click', closePopup);
 recentWorksPopup.addEventListener('click', openPopup);
-
