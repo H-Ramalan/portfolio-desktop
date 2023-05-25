@@ -34,64 +34,83 @@ form.addEventListener("submit", (e) => {
 
 // Local Storage
 const formstorage = document.querySelector(".form");
-const fullName = document.querySelector(".fullname").value;
-const emailAddress = document.querySelector(".email").value;
-const textArea = document.querySelector(".textarea").value;
-let formInputObj = {};
+const fullName = document.querySelector(".fullname");
+const emailAddress = document.querySelector(".email");
+const textArea = document.querySelector(".textarea");
 
-const formDataSave = (form) => {
-  const formInputs = new formInputs(form);
-  for (let [key, value] of formInputs.entries()) {
-    formInputObj[key] = value;
-  }
-  localStorage.setItem("formInputs", JSON.stringify(formInputObj));
+const formInput = {
+  fullName: String,
+  email: String,
+  message: String,
 };
 
-// Assuming the form has an id of "myForm"
-// const form = document.getElementById("myForm");
+formstorage.addEventListener("input", () => {
+  formInput.fullName = fullName.value;
+  formInput.email = emailAddress.value;
+  formInput.message = textArea.value;
 
-// Function to collect form data and save it in local storage
-// function saveFormData(form) {
-//   const formData = new FormData(form);
-//   const formDataObject = {};
+  localStorage.setItem("formInput", json.stringify(formInput));
+});
 
-//   for (let [key, value] of formData.entries()) {
-//     formDataObject[key] = value;
-//   }
+window.onload = () => {
+  const formData = JSON.parse(localStorage.getItem("formInput"));
 
-// Save the form data object in local storage
-//   localStorage.setItem("formData", JSON.stringify(formDataObject));
-// }
+  if (formData) {
+    fullName.value = formData.fullName;
+    emailAddress.value = formData.email;
+    textArea.value = formData.message;
+  }
+};
 
-// Usage example
-// saveFormData(form);
+// const userName = document.getElementById("user-name");
+// const userMessage = document.getElementById("user-message");
+// const contactDetails = {
+//   fullName: String,
+//   email: String,
+//   message: String,
+// };
 
-// window.addEventListener('DOMContentLoaded', (event) => {
-//   const nameInput = document.getElementById('name');
-//   const emailInput = document.getElementById('email');
+// form.addEventListener("input", () => {
+//   contactDetails.fullName = userName.value;
+//   contactDetails.email = userEmail.value;
+//   contactDetails.message = userMessage.value;
 
-// Check if local storage has data
-// if (localStorage.getItem('formData')) {
-//   const formData = JSON.parse(localStorage.getItem('formData'));
-
-// Pre-fill input fields with the data
-// nameInput.value = formData.name;
-// emailInput.value = formData.email;
-// }
-
-// Save form data to local storage when input fields change
-//   nameInput.addEventListener('input', saveFormData);
-//   emailInput.addEventListener('input', saveFormData);
+//   localStorage.setItem("contactDetails", JSON.stringify(contactDetails));
 // });
 
-// function saveFormData() {
-//   const name = document.getElementById('name').value;
-//   const email = document.getElementById('email').value;
+// window.onload = () => {
+//   const contactData = JSON.parse(localStorage.getItem("contactDetails"));
 
-//   const formData = {
-//     name: name,
-//     email: email
-//   };
+//   if (contactData) {
+//     userName.value = contactData.fullName;
+//     userEmail.value = contactData.email;
+//     userMessage.value = contactData.message;
+//   }
+// };
 
-//   localStorage.setItem('formData', JSON.stringify(formData));
-// }
+// Check for pre-filled data to load on form fields.
+const prefilledData = () => {
+  const formData = JSON.parse(localStorage.getItem("formData"));
+  if (formData) {
+    document.getElementById("txtFullname").value = formData.name || "";
+    document.getElementById("txtEmail").value = formData.email || "";
+    document.getElementById("txt_message").value = formData.message || "";
+  }
+};
+
+window.onload = prefilledData();
+
+// Create a single JavaScript object with all the data from the entire form
+const formInputs = document.querySelectorAll(
+  "#form_contact input, #form_contact textarea"
+);
+formInputs.forEach((input) => {
+  input.addEventListener("input", () => {
+    const formData = {
+      name: document.getElementById("txtFullname").value,
+      email: document.getElementById("txtEmail").value,
+      message: document.getElementById("txt_message").value,
+    };
+    localStorage.setItem("formData", JSON.stringify(formData));
+  });
+});
