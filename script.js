@@ -100,10 +100,10 @@ projects.forEach((project, i) => {
 
 // Modal Popup
 
-// const projectPopup = document.querySelector(".project-popup");
-// const btnOpenPopup = document.querySelectorAll(".see-project-appear");
-// const btnClosePopup = document.querySelector(".close-popup");
-// const recentWorksPopup = document.querySelector(".see-project-btn");
+const projectPopup = document.querySelector(".project-popup");
+const btnOpenPopup = document.querySelectorAll(".see-project-appear");
+const btnClosePopup = document.querySelector(".close-popup");
+const recentWorksPopup = document.querySelector(".see-project-btn");
 
 const openPopup = () => {
   projectPopup.style.display = "block";
