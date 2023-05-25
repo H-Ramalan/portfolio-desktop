@@ -1,5 +1,6 @@
 'use-strict';
 
+// Mobile menu popup
 const modalOpen = document.querySelector('.ham');
 const modalClose = document.querySelector('.nav-close');
 const modal = document.querySelector('.modal-view');
@@ -14,6 +15,7 @@ const closeModal = () => {
   modal.style.display = 'none';
 };
 
+// Form Validation
 modalOpen.addEventListener('click', openModal);
 modalClose.addEventListener('click', closeModal);
 
@@ -30,3 +32,33 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
   }
 });
+
+// Local Storage
+const formstorage = document.querySelector('.form');
+const fullName = document.querySelector('.fullname');
+const emailAddress = document.querySelector('.email');
+const textArea = document.querySelector('.textarea');
+
+const formInput = {
+  fullName: String,
+  email: String,
+  message: String,
+};
+
+formstorage.addEventListener('input', () => {
+  formInput.fullName = fullName.value;
+  formInput.email = emailAddress.value;
+  formInput.message = textArea.value;
+
+  localStorage.setItem('formInput', JSON.stringify(formInput));
+});
+
+window.onload = () => {
+  const formData = JSON.parse(localStorage.getItem('formInput'));
+
+  if (formData) {
+    fullName.value = formData.fullName;
+    emailAddress.value = formData.email;
+    textArea.value = formData.message;
+  }
+};
