@@ -564,6 +564,14 @@ h2 {
   padding-left: 20px;
 }
 
+.project7 {
+  display: none;
+}
+
+.projectIndex {
+  display: none;
+}
+
 .tech-used {
   color: #fff;
   font-family: "Inter", sans-serif;

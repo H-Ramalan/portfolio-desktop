@@ -29,12 +29,50 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
   }
 });
+const works = document.querySelector('.works');
+const recentWork = {
+  recentWorkimg: 'images/Img Placeholder.svg',
+  recentWorkName: 'Multi Post Stories',
+  recentWorkNote:
+    "A daily selection of privately personalized reads; no accounts or sign-ups required. This has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
+  recentWorkstack: ['CSS', 'HTML', 'Bootstrap', 'Ruby'],
+  recentLiveLink: 'https://h-ramalan.github.io/hamza.github.io/',
+  recentsourceLink: 'https://github.com/H-Ramalan/portfolio-desktop',
+};
 
+const recentProject = document.createElement('div');
+recentProject.classList.add('recent-work-card');
+recentProject.innerHTML = `
+        <img
+          src="${recentWork.recentWorkimg}"
+          class="project-image"
+          alt="${recentWork.recentWorkName}"
+        />
+        <div class="multi-post-stories">
+          <h2>${recentWork.recentWorkName}</h2>
+          <p class="recent-note">
+            ${recentWork.recentWorkNote}
+          </p>
+          <div>
+            <ul class="recent-tech">
+              ${recentWork.recentWorkstack
+    .map(
+      (tech) => `
+                <li class="recent-tech-used">${tech}</li>`,
+    )
+    .join('')}
+            </ul>
+            <button class="see-project-btn">See Project</button>
+          </div>
+        </div>
+`;
+
+works.appendChild(recentProject);
 // projects-modal-popup
 const projects = [
   {
     id: 0,
-    backImg: 'images/pj-1.svg',
+    backImg: 'images/pj3.png',
     projectName: 'Professional Art Printing Data',
     projectNote:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
@@ -44,7 +82,7 @@ const projects = [
   },
   {
     id: 1,
-    backImg: 'images/project2.svg',
+    backImg: 'images/pj3.png',
     projectName: 'Data Dashboard Healthcare',
     projectNote:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
@@ -64,7 +102,7 @@ const projects = [
   },
   {
     id: 3,
-    backImg: 'images/pj-1.svg',
+    backImg: 'images/pj3.png',
     projectName: 'Professional Art Printing Data',
     projectNote:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
@@ -74,7 +112,7 @@ const projects = [
   },
   {
     id: 4,
-    backImg: 'images/project2.svg',
+    backImg: 'images/pj3.png',
     projectName: 'Data Dashboard',
     projectNote:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
@@ -92,6 +130,17 @@ const projects = [
     liveLink: 'https://h-ramalan.github.io/hamza.github.io/',
     sourceLink: 'https://github.com/H-Ramalan/portfolio-desktop',
   },
+  {
+    id: 6,
+
+    backImg: 'images/Img Placeholder.svg',
+    projectName: 'Multi Post Stories',
+    projectNote:
+      "A daily selection of privately personalized reads; no accounts or sign-ups required. This has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
+    projectStackUsed: ['CSS', 'HTML', 'Bootstrap'],
+    liveLink: 'https://h-ramalan.github.io/hamza.github.io/',
+    sourceLink: 'https://github.com/H-Ramalan/portfolio-desktop',
+  },
 ];
 
 const projectCards = document.querySelector('.project-cards');
@@ -103,8 +152,9 @@ projects.forEach((project, i) => {
   // Create HTML structure for each project
   projectElement.innerHTML = `
     <div class="project-name">
-      <p class="name">${project.projectName} </p>
+      <p class="name">${project.projectName} ${project.id}</p>
       
+      <input class="projectIndex" value=${project.id}>
     </div>
     <p class="project-note">${project.projectNote}</p>
     <div class = "project-stack">
@@ -120,8 +170,21 @@ projects.forEach((project, i) => {
   projectCards.appendChild(projectElement);
 });
 
-const projectModal = document.querySelector('.project-popup');
-projects.forEach((project) => {
+// Modal Popup
+
+const projectPopup = document.querySelector('.project-popup');
+const backdropPopup = document.querySelector('.backdrop-popup');
+const btnOpenPopup = document.querySelectorAll('.see-project-appear');
+const recentWorksPopup = document.querySelector('.see-project-btn');
+
+const openPopup = (projectIndex) => {
+  projectPopup.style.display = 'block';
+  projectPopup.style.overflow = 'auto';
+  backdropPopup.style.display = 'block';
+  backdropPopup.style.overflow = 'auto';
+
+  const projectModal = document.querySelector('.project-popup');
+  const project = projects.find((x) => x.id === projectIndex);
   const popupContent = document.createElement('div');
   popupContent.classList.add('popup-content');
   popupContent.innerHTML = `
@@ -140,7 +203,8 @@ projects.forEach((project) => {
     .join('')}
         </ul>
         <div class="pop">
-          <img src="./images/modal-images/popup.png" alt="project-icon" />
+        
+          <img src="images/modal-images/popup.png" alt="project-icon" />
           <div class="right">
             <div class="pop-notes">
               <p class="popup-note">
@@ -176,35 +240,23 @@ projects.forEach((project) => {
             </div>
           </div>
         </div>
-      </div>
-`;
+      </div>`;
 
+  projectModal.innerHTML = '';
   projectModal.appendChild(popupContent);
-});
 
-// Modal Popup
+  const btnClosePopup = document.querySelector('.close-popup');
 
-const projectPopup = document.querySelector('.project-popup');
-const backdropPopup = document.querySelector('.backdrop-popup');
-const btnOpenPopup = document.querySelectorAll('.see-project-appear');
-const btnClosePopup = document.querySelector('.close-popup');
-const recentWorksPopup = document.querySelector('.see-project-btn');
+  const closePopup = () => {
+    projectPopup.style.display = 'none';
+    backdropPopup.style.display = 'none';
+  };
 
-const openPopup = () => {
-  projectPopup.style.display = 'block';
-  projectPopup.style.overflow = 'auto';
-  backdropPopup.style.display = 'block';
-  backdropPopup.style.overflow = 'auto';
-};
-
-const closePopup = () => {
-  projectPopup.style.display = 'none';
-  backdropPopup.style.display = 'none';
+  btnClosePopup.addEventListener('click', closePopup);
 };
 
 for (let i = 0; i < btnOpenPopup.length; i += 1) {
-  btnOpenPopup[i].addEventListener('click', openPopup);
+  btnOpenPopup[i].addEventListener('click', () => openPopup(i));
 }
 
-btnClosePopup.addEventListener('click', closePopup);
-recentWorksPopup.addEventListener('click', openPopup);
+recentWorksPopup.addEventListener('click', () => openPopup(projects.length - 1));
