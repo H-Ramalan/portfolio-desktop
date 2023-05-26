@@ -41,8 +41,6 @@ const projects = [
     projectStackUsed: ["HTML", "Bootstrap", "Ruby"],
     liveLink: "https://h-ramalan.github.io/hamza.github.io/",
     sourceLink: "https://github.com/H-Ramalan/portfolio-desktop",
-    liveIcon: "images/modal-images/seeLiveIcon.png",
-    gitIcon: "images/icons/icon - git.svg",
   },
   {
     id: 1,
@@ -53,8 +51,6 @@ const projects = [
     projectStackUsed: ["HTML", "Bootstrap", "Ruby"],
     liveLink: "https://h-ramalan.github.io/hamza.github.io/",
     sourceLink: "https://github.com/H-Ramalan/portfolio-desktop",
-    liveIcon: "images/modal-images/seeLiveIcon.png",
-    gitIcon: "images/icons/icon - git.svg",
   },
   {
     id: 2,
@@ -65,8 +61,6 @@ const projects = [
     projectStackUsed: ["HTML", "Bootstrap", "Ruby"],
     liveLink: "https://h-ramalan.github.io/hamza.github.io/",
     sourceLink: "https://github.com/H-Ramalan/portfolio-desktop",
-    liveIcon: "images/modal-images/seeLiveIcon.png",
-    gitIcon: "images/icons/icon - git.svg",
   },
   {
     id: 3,
@@ -77,8 +71,6 @@ const projects = [
     projectStackUsed: ["HTML", "Bootstrap", "Ruby"],
     liveLink: "https://h-ramalan.github.io/hamza.github.io/",
     sourceLink: "https://github.com/H-Ramalan/portfolio-desktop",
-    liveIcon: "images/modal-images/seeLiveIcon.png",
-    gitIcon: "images/icons/icon - git.svg",
   },
   {
     id: 4,
@@ -89,8 +81,6 @@ const projects = [
     projectStackUsed: ["HTML", "Bootstrap", "Ruby"],
     liveLink: "https://h-ramalan.github.io/hamza.github.io/",
     sourceLink: "https://github.com/H-Ramalan/portfolio-desktop",
-    liveIcon: "images/modal-images/seeLiveIcon.png",
-    gitIcon: "images/icons/icon - git.svg",
   },
   {
     id: 5,
@@ -101,8 +91,6 @@ const projects = [
     projectStackUsed: ["HTML", "Bootstrap", "Ruby"],
     liveLink: "https://h-ramalan.github.io/hamza.github.io/",
     sourceLink: "https://github.com/H-Ramalan/portfolio-desktop",
-    liveIcon: "images/modal-images/seeLiveIcon.png",
-    gitIcon: "images/icons/icon - git.svg",
   },
 ];
 
@@ -132,41 +120,43 @@ projects.forEach((project, i) => {
   projectCards.appendChild(projectElement);
 });
 
-btnOpenPopup.forEach((button, index) => {
-  button.addEventListener("click", () => {
-    const project = projects[index];
-    if (project) {
-      popupContent.innerHTML = `
-       <div class="popup-content">
-        <span class="popup-name">${project.name}</span>
+const projectModal = document.querySelector(".project-popup");
+projects.forEach((project) => {
+  const popupContent = document.createElement("div");
+  popupContent.classList.add("popup-content");
+  popupContent.innerHTML = `
+        <span class="popup-name">${project.projectName}</span>
         <img
           src="./images/modal-images/close-modal.png"
           alt="X"
           class="close-popup"
         />
         <ul class="popup-stack">
-           ${project.projectStackUsed
-             .map(
-               (tech) => `
-          <li class="card-tag modal-tag">${tech}</li>`
-             )
-             .join("")}
+          ${project.projectStackUsed
+            .map(
+              (tech) => `
+          <li class="popup-list">${tech}</li>`
+            )
+            .join("")}
         </ul>
         <div class="pop">
-          <img src="${project.backImg}" alt="${project.name}" />
+          <img src="./images/modal-images/popup.png" alt="project-icon" />
           <div class="right">
             <div class="pop-notes">
-              <p class="popup-note">${project.projectNote}</p>
+              <p class="popup-note">
+                ${project.projectNote}
+              </p>
+             
             </div>
             <div class="popup-btns">
               <button class="see">
                 <a
-                  href="${project.liveLink}"
+                  href=${project.liveLink}"
                   class="see-link"
                   >See live</a
                 >
                 <img
-                  src="${project.liveIcon}"
+                  src="./images/modal-images/seeLiveIcon.png"
                   alt="seeLiveIcon"
                   class="img-icon"
                 />
@@ -178,7 +168,7 @@ btnOpenPopup.forEach((button, index) => {
                   >See source</a
                 >
                 <img
-                  src="${project.gitIcon}"
+                  src="./images/icons/icon - git.svg"
                   alt="github-icon"
                   class="img-icon"
                 />
@@ -187,10 +177,9 @@ btnOpenPopup.forEach((button, index) => {
           </div>
         </div>
       </div>
-      `;
-      openPopup();
-    }
-  });
+`;
+
+  projectModal.appendChild(popupContent);
 });
 
 // Modal Popup
