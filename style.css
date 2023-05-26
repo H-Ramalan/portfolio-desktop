@@ -273,9 +273,8 @@ h2 {
 .recent-tech {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  margin: 20px 0;
-  margin-top: 5px;
+  margin: 10px 0;
+  padding-left: 0;
 }
 
 .recent-tech-used {
@@ -311,6 +310,7 @@ h2 {
   line-height: 24px;
   color: #fff;
   padding-left: 20px;
+  margin: 5px 0;
 }
 
 .project-name {
@@ -320,6 +320,10 @@ h2 {
   line-height: 44px;
   color: #fff;
   padding-left: 20px;
+}
+
+.name {
+  margin: 10px 0;
 }
 
 .project1 {
@@ -356,7 +360,7 @@ h2 {
 }
 
 .card:hover .see-project-appear {
-  display: block;
+  display: inline-block;
 }
 
 .see-project-appear:hover:enabled {
@@ -393,7 +397,6 @@ h2 {
 
 .project-stack {
   margin: 10px 0;
-  padding-left: 20px;
 }
 
 .project1:hover > .project-name {
@@ -467,7 +470,7 @@ h2 {
 }
 
 .project4 {
-  background-image: url(./images/pj1.png);
+  background-image: url(./images/pj-1.svg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 435px;
@@ -475,6 +478,12 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.project4:hover {
+  background-image: url(./images/pj1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .project4:hover > .project-name {
@@ -489,11 +498,78 @@ h2 {
   visibility: hidden;
 }
 
+.project5 {
+  background-image: url(./images/project3.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 435px;
+  width: calc(33.33% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.project5:hover {
+  background-image: url(./images/pj3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project5:hover > .project-name {
+  display: none;
+}
+
+.project5:hover > .project-note {
+  display: none;
+}
+
+.project5:hover > .project-stack {
+  visibility: hidden;
+}
+
+.project6 {
+  background-image: url(./images/project3.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 435px;
+  width: calc(33.33% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.project6:hover {
+  background-image: url(./images/pj3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project6:hover > .project-name {
+  display: none;
+}
+
+.project6:hover > .project-note {
+  display: none;
+}
+
+.project6:hover > .project-stack {
+  visibility: hidden;
+}
+
 .project-stack-used {
   display: flex;
   list-style: none;
   justify-content: flex-start;
   color: #fff;
+  padding-left: 20px;
+}
+
+.project7 {
+  display: none;
+}
+
+.projectIndex {
+  display: none;
 }
 
 .tech-used {
@@ -509,6 +585,124 @@ h2 {
 
 .tech-used:first-of-type {
   margin-left: 0;
+}
+
+.project-popup {
+  height: 631px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  overflow: auto;
+  background-color: #fff;
+  backdrop-filter: blur(3px);
+  width: 1156px;
+  display: none;
+}
+
+.popup-content {
+  margin: 15px;
+}
+
+.popup-name {
+  font-family: "Crete Round", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 44px;
+  text-align: left;
+  color: #172b4d;
+}
+
+.popup-list {
+  border: 1px solid #8993a4;
+  padding: 8px 17px;
+}
+
+.close-popup {
+  height: 12px;
+  width: 12px;
+  float: right;
+}
+
+.popup-stack {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.pop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.pop-notes {
+  width: 424px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.popup-note {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  margin-top: 0;
+}
+
+.popup-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.mobile {
+  display: none;
+}
+
+.backdrop-popup {
+  display: none;
+  z-index: 999;
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  opacity: 0.6;
+}
+
+.see {
+  background-color: #ff6b00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.img-icon {
+  margin-left: 10px;
+}
+
+.see-link {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
 }
 
 .about-me {
@@ -856,6 +1050,72 @@ li.skills::before {
     color: #fff;
   }
 
+  .backdrop-popup {
+    z-index: 999;
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    opacity: 0.1;
+  }
+
+  .project-popup {
+    display: none;
+    position: fixed;
+    height: 90vh;
+    width: 90vw;
+    z-index: 9999;
+    overflow: auto;
+    background-color: #fff;
+    backdrop-filter: blur(3px);
+  }
+
+  .close-popup {
+    height: 12px;
+    width: 12px;
+    float: right;
+    margin-top: 15px;
+  }
+
+  .popup-stack {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pop {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+
+  .popup-btns {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .popup-note {
+    display: block;
+  }
+
+  .pop-notes {
+    width: 311px;
+    margin: 1.5rem 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44px;
+    text-align: left;
+  }
+
   .main {
     background-image: url(./images/Illustration.png);
     background-position-x: right;
@@ -960,6 +1220,26 @@ li.skills::before {
   .card {
     height: 386px;
     width: 100% !important;
+  }
+
+  .see-project-appear {
+    background-color: #ff6b00;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    display: block;
+  }
+
+  .project-stack-used {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    color: #fff;
+    padding-left: 20px;
   }
 
   .about-me {
