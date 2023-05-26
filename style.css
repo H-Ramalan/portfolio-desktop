@@ -647,7 +647,7 @@ h2 {
   font-weight: 400;
   line-height: 30px;
   text-align: left;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .popup-btns {
@@ -1105,7 +1105,6 @@ li.skills::before {
     font-size: 32px;
     font-weight: 700;
     line-height: 44px;
-    letter-spacing: 0em;
     text-align: left;
   }
 
